@@ -31,14 +31,20 @@ namespace RollAlong
             loopOppgave3();
 
             //Krokodillespill
+            Krokodillespill();
+        }
+
+        private static void Krokodillespill()
+        {
             int points = 0;
             int userControl = V;
             Console.WriteLine("Krokkodillespill: du får to tall, skriv '>', '<', eller '=' for å peke krokodillemunn mot størst nummer/si tallene er like og trykk 'enter'");
             Console.WriteLine("skriv '0' og trykk enter for å avslutte krokodillespill");
-            while (userControl != 48) { 
-            int num1 = randomizer();
-            int num2 = randomizer();
-            Console.WriteLine(num1 + "_" + num2);
+            while (userControl != 48)
+            {
+                int num1 = randomizer();
+                int num2 = randomizer();
+                Console.WriteLine(num1 + "_" + num2);
                 userControl = Console.Read();
                 // for å bli kvitt read buffer:
                 Console.Read();
@@ -57,7 +63,7 @@ namespace RollAlong
                         case 62:
                             Console.WriteLine("Nei, tall to var størst");
                             continue;
-                        default: 
+                        default:
                             Console.WriteLine("Er du sikker på du skrev '>', '<', eller '='?");
                             continue;
                     }
